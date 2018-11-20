@@ -1,7 +1,7 @@
 using Xunit;
 using Xunit.Abstractions;
 
-namespace SvnRevision.Tests
+namespace Svn.Tests
 {
     public class SvnInfoShould
     {

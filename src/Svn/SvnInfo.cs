@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace SvnRevision
+namespace Svn
 {
     public class SvnInfo
     {
@@ -90,7 +90,6 @@ namespace SvnRevision
                 if (line.StartsWith("Last Changed Date: ", StringComparison.InvariantCultureIgnoreCase))
                 {
                     LastChangedDate = line.Substring("Last Changed Date: ".Length);
-                    continue;
                 }
             }
         }
