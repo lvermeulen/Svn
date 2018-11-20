@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SvnRevision\SvnRevision.csproj" />
+    <ProjectReference Include="..\Svn\Svn.csproj" />
   </ItemGroup>
 
 </Project>
