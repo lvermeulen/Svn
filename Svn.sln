@@ -7,6 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Svn", "Svn\Svn.csproj", "{1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Svn.Tests", "Svn.Tests\Svn.Tests.csproj", "{7E2B6654-7486-4043-9E28-898012DD3607}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{1B70842C-968C-4A6C-8E1A-6B1FFAB2718C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1DE16CA0-8535-4F6C-A799-92C9FF077E49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvnCommander", "samples\SvnCommander\SvnCommander.csproj", "{26715169-6AF8-41A5-B276-C5015BD22981}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +27,17 @@ Global
 		{7E2B6654-7486-4043-9E28-898012DD3607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E2B6654-7486-4043-9E28-898012DD3607}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E2B6654-7486-4043-9E28-898012DD3607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26715169-6AF8-41A5-B276-C5015BD22981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26715169-6AF8-41A5-B276-C5015BD22981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26715169-6AF8-41A5-B276-C5015BD22981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26715169-6AF8-41A5-B276-C5015BD22981}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E2B6654-7486-4043-9E28-898012DD3607} = {1DE16CA0-8535-4F6C-A799-92C9FF077E49}
+		{26715169-6AF8-41A5-B276-C5015BD22981} = {1B70842C-968C-4A6C-8E1A-6B1FFAB2718C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6E756668-9B14-4052-ACA6-4BA79BA3E911}
