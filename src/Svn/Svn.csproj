@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Luk Vermeulen</Authors>
+    <Company />
+    <Description>Svn Utilities</Description>
+    <Copyright>Copyright (c) 2018 by Luk Vermeulen. All rights reserved.</Copyright>
+    <PackageLicenseUrl>https://github.com/lvermeulen/Svn/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/lvermeulen/Svn</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lvermeulen/Svn.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>svn</PackageTags>
   </PropertyGroup>
 
 </Project>
