@@ -7,6 +7,14 @@
     <ToolCommandName>svncommander</ToolCommandName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Luk Vermeulen</Authors>
+    <Copyright>Copyright (c) 2018 by Luk Vermeulen. All rights reserved.</Copyright>
+    <PackageLicenseUrl>https://github.com/lvermeulen/Svn/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/lvermeulen/Svn</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lvermeulen/Svn.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>svn commander</PackageTags>
+    <PackageIconUrl>https://i.imgur.com/X3pvC1T.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

@@ -17,6 +17,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Svn.Tests", "test\Svn.Tests
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Svn.Outputters.Tests", "test\Svn.Outputters.Tests\Svn.Outputters.Tests.csproj", "{BD19AFD8-028F-47E5-9F83-821635229A72}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{3A6E218E-62E1-4EDF-8C23-F8B316F80DA4}"
+	ProjectSection(SolutionItems) = preProject
+		build\build.ps1 = build\build.ps1
+		build\test.ps1 = build\test.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F830E0FD-A4D9-43F1-A5E0-0B2F2F411100}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		appveyor.yml = appveyor.yml
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{67577470-4E59-4FF6-9F14-264CF57539D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +42,7 @@ Global
 		{26715169-6AF8-41A5-B276-C5015BD22981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{26715169-6AF8-41A5-B276-C5015BD22981}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26715169-6AF8-41A5-B276-C5015BD22981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26715169-6AF8-41A5-B276-C5015BD22981}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EC9067F4-85DA-4142-836A-D3B9FECC297E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EC9067F4-85DA-4142-836A-D3B9FECC297E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC9067F4-85DA-4142-836A-D3B9FECC297E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +50,7 @@ Global
 		{0CB6736C-35F4-4AD1-A845-79EF43B57FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0CB6736C-35F4-4AD1-A845-79EF43B57FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CB6736C-35F4-4AD1-A845-79EF43B57FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CB6736C-35F4-4AD1-A845-79EF43B57FD3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{52DA2DAB-B451-4238-BAF7-B18236D28CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{52DA2DAB-B451-4238-BAF7-B18236D28CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52DA2DAB-B451-4238-BAF7-B18236D28CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +63,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{26715169-6AF8-41A5-B276-C5015BD22981} = {1B70842C-968C-4A6C-8E1A-6B1FFAB2718C}
+		{EC9067F4-85DA-4142-836A-D3B9FECC297E} = {67577470-4E59-4FF6-9F14-264CF57539D5}
+		{0CB6736C-35F4-4AD1-A845-79EF43B57FD3} = {67577470-4E59-4FF6-9F14-264CF57539D5}
 		{52DA2DAB-B451-4238-BAF7-B18236D28CDB} = {1DE16CA0-8535-4F6C-A799-92C9FF077E49}
 		{BD19AFD8-028F-47E5-9F83-821635229A72} = {1DE16CA0-8535-4F6C-A799-92C9FF077E49}
 	EndGlobalSection
