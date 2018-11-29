@@ -90,6 +90,31 @@ namespace Svn
                 if (line.StartsWith("Last Changed Date: ", StringComparison.InvariantCultureIgnoreCase))
                 {
                     LastChangedDate = line.Substring("Last Changed Date: ".Length);
+                    continue;
+                }
+                if (line.StartsWith("Last Changed Rev: ", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    LastChangedRev = line.Substring("Last Changed Rev: ".Length);
+                    continue;
+                }
+                if (line.StartsWith("Schedule: ", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    Schedule = line.Substring("Schedule: ".Length);
+                    continue;
+                }
+                if (line.StartsWith("Lock Token: ", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    LockToken = line.Substring("Lock Token: ".Length);
+                    continue;
+                }
+                if (line.StartsWith("Lock Owner: ", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    LockOwner = line.Substring("Lock Owner: ".Length);
+                    continue;
+                }
+                if (line.StartsWith("Lock Created: ", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    LockCreated = line.Substring("Lock Created: ".Length);
                 }
             }
         }
@@ -104,5 +129,9 @@ namespace Svn
         public string LastChangedAuthor { get; private set; }
         public string LastChangedRev { get; private set; }
         public string LastChangedDate { get; private set; }
+        public string Schedule { get; private set; }
+        public string LockToken { get; private set; }
+        public string LockOwner { get; private set; }
+        public string LockCreated { get; private set; }
     }
 }
