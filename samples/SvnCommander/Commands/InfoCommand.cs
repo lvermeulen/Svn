@@ -8,16 +8,20 @@ namespace SvnCommander.Commands
     {
         private static readonly IDictionary<string, string> s_propertyByArgument = new Dictionary<string, string>
         {
-            { "path", "Path" },
-            { "url", "Url" },
-            { "relativeurl", "RelativeUrl" },
-            { "repositoryroot", "RepositoryRoot" },
-            { "repositoryuuid", "RepositoryUuid" },
-            { "revision", "Revision" },
-            { "nodekind", "NodeKind" },
-            { "lastchangedauthor", "LastChangedAuthor" },
-            { "lastchangedrev", "LastChangedRev" },
-            { "lastchangeddate", "LastChangedDate" }
+            { "path", nameof(SvnInfo.Path) },
+            { "url", nameof(SvnInfo.Url) },
+            { "relativeurl", nameof(SvnInfo.RelativeUrl) },
+            { "repositoryroot", nameof(SvnInfo.RepositoryRoot) },
+            { "repositoryuuid", nameof(SvnInfo.RepositoryUuid) },
+            { "revision", nameof(SvnInfo.Revision) },
+            { "nodekind", nameof(SvnInfo.NodeKind) },
+            { "lastchangedauthor", nameof(SvnInfo.LastChangedAuthor) },
+            { "lastchangedrev", nameof(SvnInfo.LastChangedRev) },
+            { "lastchangeddate", nameof(SvnInfo.LastChangedDate) },
+            { "schedule", nameof(SvnInfo.Schedule) },
+            { "locktoken", nameof(SvnInfo.LockToken) },
+            { "lockowner", nameof(SvnInfo.LockOwner) },
+            { "lockcreated", nameof(SvnInfo.LockCreated) }
         };
 
         private string GetPropertyValue(object obj, string propertyName) => obj
@@ -33,7 +37,10 @@ namespace SvnCommander.Commands
             string propertyName = s_propertyByArgument[options.Argument.ToLowerInvariant()];
             string propertyValue = GetPropertyValue(svnInfo, propertyName);
 
-            new ConsoleOutputter().Output(outputter.Output(propertyValue, options.OutputName));
+            if (outputter.GetType() != typeof(ConsoleOutputter))
+            {
+                new ConsoleOutputter().Output(outputter.Output(propertyValue, options.OutputName));
+            }
         }
     }
 }
