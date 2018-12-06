@@ -8,20 +8,20 @@ namespace SvnCommander.Commands
     {
         private static readonly IDictionary<string, string> s_propertyByArgument = new Dictionary<string, string>
         {
-            { "path", nameof(SvnInfo.Path) },
-            { "url", nameof(SvnInfo.Url) },
-            { "relativeurl", nameof(SvnInfo.RelativeUrl) },
-            { "repositoryroot", nameof(SvnInfo.RepositoryRoot) },
-            { "repositoryuuid", nameof(SvnInfo.RepositoryUuid) },
-            { "revision", nameof(SvnInfo.Revision) },
-            { "nodekind", nameof(SvnInfo.NodeKind) },
-            { "lastchangedauthor", nameof(SvnInfo.LastChangedAuthor) },
-            { "lastchangedrev", nameof(SvnInfo.LastChangedRev) },
-            { "lastchangeddate", nameof(SvnInfo.LastChangedDate) },
-            { "schedule", nameof(SvnInfo.Schedule) },
-            { "locktoken", nameof(SvnInfo.LockToken) },
-            { "lockowner", nameof(SvnInfo.LockOwner) },
-            { "lockcreated", nameof(SvnInfo.LockCreated) }
+            { nameof(SvnInfo.Path).ToLower(), nameof(SvnInfo.Path) },
+            { nameof(SvnInfo.Url).ToLower(), nameof(SvnInfo.Url) },
+            { nameof(SvnInfo.RelativeUrl).ToLower(), nameof(SvnInfo.RelativeUrl) },
+            { nameof(SvnInfo.RepositoryRoot).ToLower(), nameof(SvnInfo.RepositoryRoot) },
+            { nameof(SvnInfo.RepositoryUuid).ToLower(), nameof(SvnInfo.RepositoryUuid) },
+            { nameof(SvnInfo.Revision).ToLower(), nameof(SvnInfo.Revision) },
+            { nameof(SvnInfo.NodeKind).ToLower(), nameof(SvnInfo.NodeKind) },
+            { nameof(SvnInfo.LastChangedAuthor).ToLower(), nameof(SvnInfo.LastChangedAuthor) },
+            { nameof(SvnInfo.LastChangedRev).ToLower(), nameof(SvnInfo.LastChangedRev) },
+            { nameof(SvnInfo.LastChangedDate).ToLower(), nameof(SvnInfo.LastChangedDate) },
+            { nameof(SvnInfo.Schedule).ToLower(), nameof(SvnInfo.Schedule) },
+            { nameof(SvnInfo.LockToken).ToLower(), nameof(SvnInfo.LockToken) },
+            { nameof(SvnInfo.LockOwner).ToLower(), nameof(SvnInfo.LockOwner) },
+            { nameof(SvnInfo.LockCreated).ToLower(), nameof(SvnInfo.LockCreated) }
         };
 
         private string GetPropertyValue(object obj, string propertyName) => obj
