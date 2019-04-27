@@ -5,14 +5,14 @@ namespace Svn
 {
     public static class StringExtensions
     {
-        public static IEnumerable<string> ToLines(this string input)
+        public static IEnumerable<string> ToLines(this string s)
         {
-            if (input == null)
+            if (s == null)
             {
                 yield break;
             }
 
-            using (var reader = new StringReader(input))
+            using (var reader = new StringReader(s))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)

@@ -38,7 +38,7 @@ namespace Svn
                 ? memberExpression.Member.Name
                 : null;
 
-        private void SetPropertyValueAfterLineSubString<T>(T t, string line, Expression<Func<T, string>> expression, string path)
+        private void SetPropertyValueAfterLineSubString(string line, Expression<Func<SvnInfo, string>> expression, string path)
         {
             if (!line.StartsWith(path, StringComparison.OrdinalIgnoreCase))
             {
@@ -52,29 +52,27 @@ namespace Svn
                 return;
             }
 
-            typeof(SvnInfo)
-                .GetProperty(propertyName)
-                ?.SetValue(t, value);
+            typeof(SvnInfo).GetProperty(propertyName)?.SetValue(this, value);
         }
 
         private void ParseOutput(string output)
         {
             foreach (string line in output.ToLines())
             {
-                SetPropertyValueAfterLineSubString(this, line, x => x.Path, "Path: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.Url, "URL: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.RelativeUrl, "Relative URL: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.RepositoryRoot, "Repository Root: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.RepositoryUuid, "Repository UUID: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.Revision, "Revision: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.NodeKind, "Node Kind: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.LastChangedAuthor, "Last Changed Author: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.LastChangedRev, "Last Changed Rev: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.LastChangedDate, "Last Changed Date: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.Schedule, "Schedule: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.LockToken, "Lock Token: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.LockOwner, "Lock Owner: ");
-                SetPropertyValueAfterLineSubString(this, line, x => x.LockCreated, "Lock Created: ");
+                SetPropertyValueAfterLineSubString(line, x => x.Path, "Path: ");
+                SetPropertyValueAfterLineSubString(line, x => x.Url, "URL: ");
+                SetPropertyValueAfterLineSubString(line, x => x.RelativeUrl, "Relative URL: ");
+                SetPropertyValueAfterLineSubString(line, x => x.RepositoryRoot, "Repository Root: ");
+                SetPropertyValueAfterLineSubString(line, x => x.RepositoryUuid, "Repository UUID: ");
+                SetPropertyValueAfterLineSubString(line, x => x.Revision, "Revision: ");
+                SetPropertyValueAfterLineSubString(line, x => x.NodeKind, "Node Kind: ");
+                SetPropertyValueAfterLineSubString(line, x => x.LastChangedAuthor, "Last Changed Author: ");
+                SetPropertyValueAfterLineSubString(line, x => x.LastChangedRev, "Last Changed Rev: ");
+                SetPropertyValueAfterLineSubString(line, x => x.LastChangedDate, "Last Changed Date: ");
+                SetPropertyValueAfterLineSubString(line, x => x.Schedule, "Schedule: ");
+                SetPropertyValueAfterLineSubString(line, x => x.LockToken, "Lock Token: ");
+                SetPropertyValueAfterLineSubString(line, x => x.LockOwner, "Lock Owner: ");
+                SetPropertyValueAfterLineSubString(line, x => x.LockCreated, "Lock Created: ");
             }
         }
 
